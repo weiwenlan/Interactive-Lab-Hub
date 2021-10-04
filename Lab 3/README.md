@@ -58,6 +58,10 @@ You can also play audio files directly with `aplay filename`. Try typing `aplay 
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
 (This shell file should be saved to your own repo for this lab.)
 
+```
+espeak -ven+f2 -k5 -s150 --stdout  "Hi Jeremy" | aplay
+```
+
 Bonus: If this topic is very exciting to you, you can try out this new TTS system we recently learned about: https://github.com/rhasspy/larynx
 
 ### Speech to Text
@@ -69,6 +73,12 @@ In particular, look at `test_words.py` and make sure you understand how the voca
 One thing you might need to pay attention to is the audio input setting of Pi. Since you are plugging the USB cable of your webcam to your Pi at the same time to act as speaker, the default input might be set to the webcam microphone, which will not be working for recording.
 
 \*\***Write your own shell file that verbally asks for a numerical based input (such as a phone number, zipcode, number of pets, etc) and records the answer the respondent provides.**\*\*
+
+```
+python require_zipcode.py
+```
+
+![](image/test_zipcode.png)
 
 Bonus Activity:
 
@@ -106,14 +116,14 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 \*\***Post your storyboard and diagram here.**\*\*
 
-![](./storyboard.jpg)
+![](image/storyboard.jpg)
+![](image/storyboard2.png)
 
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses.
 
 \*\***Please describe and document your process.**\*\*
 
-This device aims to help you in reviewing your things to do which could be added through website. When you say good morning to the device, it will auto remind you what you need to do for today while you may busy cooking breakfast or brushing your teeth. You will also able to repeat the podcast by pressing the button.
-
+**This device aims to help you in reviewing your things to do which could be added through website. When you say good morning to the device, it will auto remind you what you need to do for today while you may busy cooking breakfast or brushing your teeth. You will also able to repeat the podcast by pressing the button.**
 
 ### Acting out the dialogue
 
@@ -126,6 +136,9 @@ Find a partner, and _without sharing the script with your partner_ try out the d
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser. You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
 
 \*\***Describe if the dialogue seemed different than what you imagined, or when acted out, when it was wizarded, and how.**\*\*
+
+![](image/video.png)
+https://www.youtube.com/watch?v=xnpNCmWf0q8
 
 # Lab 3 Part 2
 
