@@ -1,7 +1,7 @@
 '''
 Author: your name
 Date: 2021-10-04 17:19:19
-LastEditTime: 2021-10-04 17:19:20
+LastEditTime: 2021-10-04 17:26:27
 LastEditors: Please set LastEditors
 Description: In User Settings Edit
 FilePath: /Interactive-Lab-Hub/Lab 3/run_microphone.py
@@ -92,8 +92,9 @@ try:
                 print(tmp['text'] == 'one')
                 if tmp['text'] == 'good morning':
                     print('receive command order')
-                    os.system(
-                        'espeak -ven+f2 -k5 -s150 --stdout  "You look different today" | aplay')
+                    # os.system(
+                    #     'espeak -ven+f2 -k5 -s150 --stdout  "You look different today" | aplay')
+                    os.system('python html_parser.py')
                     break
             else:
                 if rec.PartialResult() == '"partial" : "one"':
