@@ -1,7 +1,7 @@
 '''
 Author: your name
 Date: 2021-10-04 18:00:08
-LastEditTime: 2021-10-04 18:01:12
+LastEditTime: 2021-10-04 18:02:40
 LastEditors: Please set LastEditors
 Description: In User Settings Edit
 FilePath: /Interactive-Lab-Hub/Lab 3/require_zipcode.py
@@ -98,7 +98,7 @@ try:
             if rec.AcceptWaveform(data):
                 tmp = json.loads(rec.Result())
 
-                print(tmp['text'])
+                print("Zipcode: ", tmp['text'])
             else:
                 if rec.PartialResult() == '"partial" : "one"':
                     print('initialize the speaking')
