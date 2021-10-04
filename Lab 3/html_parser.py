@@ -30,5 +30,6 @@ def construct_to_do_list_speech(list_of_todos):
 
 
 sentence = construct_to_do_list_speech(todo_items_list)
-sentence = 'espeak -ven+f2 -k5 -s150 --stdout '+sentence+'| aplay'
+print(sentence)
+sentence = 'espeak -ven+f2 -k5 -s150 --stdout "'+sentence+'" | aplay'
 os.system(sentence)

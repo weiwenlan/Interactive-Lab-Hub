@@ -94,7 +94,7 @@ try:
                     print('receive command order')
                     # os.system(
                     #     'espeak -ven+f2 -k5 -s150 --stdout  "You look different today" | aplay')
-                    os.system('python html_parser.py')
+                    os.system('python3 html_parser.py')
                     break
             else:
                 if rec.PartialResult() == '"partial" : "one"':
