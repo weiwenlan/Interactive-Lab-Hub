@@ -119,7 +119,6 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 \*\***Post your storyboard and diagram here.**\*\*
 
 ![](image/storyboard.jpg)
-![](image/storyboard2.png)
 
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses.
 
@@ -151,6 +150,7 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings...
 2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
 3. Make a new storyboard, diagram and/or script based on these reflections.
+   ![](image/storyboard2.png)
 
 ## Prototype your system
 
@@ -163,6 +163,9 @@ The system should:
 _Document how the system works_
 
 _Include videos or screencaptures of both the system and the controller._
+![](image/screenshot.png)
+
+Video Link : https://www.youtube.com/watch?v=bEcbrsW1cBQ
 
 ## Test the system
 
