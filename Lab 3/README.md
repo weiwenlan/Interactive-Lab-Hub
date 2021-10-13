@@ -175,16 +175,18 @@ Answer the following:
 
 ### What worked well about the system and what didn't?
 
-\*\*_your answer here_\*\*
+The system could receive information explicitly. However, they do think it would be better if there are more interactions, like repeat.
 
 ### What worked well about the controller and what didn't?
 
-\*\*_your answer here_\*\*
+The controller is originally a web camera, it works well when used as a speaker. It would be better to use as the camera. When the camera notices you, it may just start podcasting.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-\*\*_your answer here_\*\*
+It lets me know more about how to interact with the system and users in a friendly way.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
+
+As the interaction we use now is simple voice, so it would be better to build a dataset of feature words to improve the robustness.
 
 \*\*_your answer here_\*\*
