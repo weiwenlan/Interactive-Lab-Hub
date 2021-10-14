@@ -148,9 +148,25 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings...
+
+We can make the responses that the text to speech in various styles instead of one simple greeting.
+
 2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
+
+I think we could host a website to host the to-do list dynamically. It is also a great way to use camera to help with interactions.
+
 3. Make a new storyboard, diagram and/or script based on these reflections.
-   ![](image/storyboard2.png)
+
+```
+User: Good Morning (keyword)
+
+Pi: Good Morning, here is your to do lis: ...
+
+Pi: Have a nice day, I believe you can do it.
+
+```
+
+![](image/storyboard2.png)
 
 ## Prototype your system
 
@@ -162,8 +178,20 @@ The system should:
 
 _Document how the system works_
 
+The Voice To-Do list uses the audio receptor to capture and recognize an user command in order to read off a to-do list.
+
+The system comprises the following components:
+
+- audio receptor
+- script to recognize voice commant
+- script that parses the to-do list website and extracts a - - list of to-do list items
+- speaker
+- html website that contains to-do list
+
 _Include videos or screencaptures of both the system and the controller._
 ![](image/screenshot.png)
+
+![](image/video_2.png)
 
 Video Link : https://www.youtube.com/watch?v=bEcbrsW1cBQ
 
@@ -175,7 +203,7 @@ Answer the following:
 
 ### What worked well about the system and what didn't?
 
-The system could receive information explicitly. However, they do think it would be better if there are more interactions, like repeat.
+The system could receive information explicitly. However, testers do think it would be better if there are more interactions, like repeat and use voice to control the bot.
 
 ### What worked well about the controller and what didn't?
 
@@ -183,10 +211,10 @@ The controller is originally a web camera, it works well when used as a speaker.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-It lets me know more about how to interact with the system and users in a friendly way.
+It lets me know more about how to interact with the system and users in a friendly way. The system could be modified to use a distance sensor, which triggers a text-to-speech prompt, or a light
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
 As the interaction we use now is simple voice, so it would be better to build a dataset of feature words to improve the robustness.
 
-\*\*_your answer here_\*\*
+We can also capture the time of day the users interacts with the system and analyze when the user is most likely to need the to-do list reminder
