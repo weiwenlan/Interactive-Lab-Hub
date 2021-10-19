@@ -98,6 +98,9 @@ Twizzler 6 touched!
 
 ![Adafruit MPR121 12-Key Capacitive Touch Sensor](https://user-images.githubusercontent.com/14202464/137830295-ba00b3dc-9d27-49eb-9e24-4478d5395533.jpg)
 
+<img width="781" alt="a1" src="https://user-images.githubusercontent.com/40989769/137969886-23b49fa0-3693-486c-9b06-66629a49a706.png">
+
+
 
 ### Part B
 ### More sensors
@@ -125,6 +128,11 @@ You can go the the [Adafruit GitHub Page](https://github.com/adafruit/Adafruit_C
 
 ![Light_Proximity_Gesture sensor (APDS-9960)](https://user-images.githubusercontent.com/14202464/137830337-e5fdc843-eb49-4a14-8ac8-0c947d887a88.jpg)
 
+<img width="781" alt="a2" src="https://user-images.githubusercontent.com/40989769/137969915-89cb3352-4451-4d0a-a7f9-3299a991b211.png">
+
+<img width="781" alt="a3" src="https://user-images.githubusercontent.com/40989769/137969938-3307b0be-3d27-4e26-9534-f35465d68de7.png">
+<img width="781" alt="a4" src="https://user-images.githubusercontent.com/40989769/137969962-6eca808f-86fc-4c7b-af32-9662784dd65a.png">
+
 
 #### Rotary Encoder
 
@@ -148,6 +156,12 @@ You can go to the [Adafruit Learn Page](https://learn.adafruit.com/adafruit-i2c-
 
 ![Adafruit I2C QT Rotary Encoder](https://user-images.githubusercontent.com/14202464/137830351-161b1204-e56a-406e-8951-c9b2b7869ae9.jpg)
 
+<img width="781" alt="a5" src="https://user-images.githubusercontent.com/40989769/137970007-6720d0b9-2e81-4a58-87c6-5a7a0c6f390e.png">
+
+
+
+
+
 #### Joystick
 
 A [joystick](https://www.sparkfun.com/products/15168) can be used to sense and report the input of the stick for it pivoting angle or direction. It also comes with a button input!
@@ -163,6 +177,9 @@ Connect it to your pi with Qwiic connector and try running the example script to
 ```
 
 You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Joystick_Py) to learn more about the sensor!
+
+<img width="781" alt="a6" src="https://user-images.githubusercontent.com/40989769/137970192-91c43e25-d7fc-4d5c-aa3c-763f1adca1cf.png">
+
 
 #### (Optional) Distance Sensor
 
@@ -185,6 +202,9 @@ You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_VL53L
 #### Testing - Qwiic Multi Distance Sensor (VL53L3CX)
 
 ![Qwiic Multi Distance Sensor - VL53L3CX](https://user-images.githubusercontent.com/14202464/137830381-7eb0d7d5-8a4d-41d8-ab7c-a9310578d4df.jpg)
+
+<img width="781" alt="a7" src="https://user-images.githubusercontent.com/40989769/137970216-3b9f4166-44e0-4b50-85a7-c652926632f1.png">
+
 
 ### Part C
 
