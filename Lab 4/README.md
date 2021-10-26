@@ -98,9 +98,6 @@ Twizzler 6 touched!
 
 ![Adafruit MPR121 12-Key Capacitive Touch Sensor](https://user-images.githubusercontent.com/14202464/137830295-ba00b3dc-9d27-49eb-9e24-4478d5395533.jpg)
 
-<img width="781" alt="a1" src="https://user-images.githubusercontent.com/40989769/137969886-23b49fa0-3693-486c-9b06-66629a49a706.png">
-
-
 
 ### Part B
 ### More sensors
@@ -128,11 +125,6 @@ You can go the the [Adafruit GitHub Page](https://github.com/adafruit/Adafruit_C
 
 ![Light_Proximity_Gesture sensor (APDS-9960)](https://user-images.githubusercontent.com/14202464/137830337-e5fdc843-eb49-4a14-8ac8-0c947d887a88.jpg)
 
-<img width="781" alt="a2" src="https://user-images.githubusercontent.com/40989769/137969915-89cb3352-4451-4d0a-a7f9-3299a991b211.png">
-
-<img width="781" alt="a3" src="https://user-images.githubusercontent.com/40989769/137969938-3307b0be-3d27-4e26-9534-f35465d68de7.png">
-<img width="781" alt="a4" src="https://user-images.githubusercontent.com/40989769/137969962-6eca808f-86fc-4c7b-af32-9662784dd65a.png">
-
 
 #### Rotary Encoder
 
@@ -156,12 +148,6 @@ You can go to the [Adafruit Learn Page](https://learn.adafruit.com/adafruit-i2c-
 
 ![Adafruit I2C QT Rotary Encoder](https://user-images.githubusercontent.com/14202464/137830351-161b1204-e56a-406e-8951-c9b2b7869ae9.jpg)
 
-<img width="781" alt="a5" src="https://user-images.githubusercontent.com/40989769/137970007-6720d0b9-2e81-4a58-87c6-5a7a0c6f390e.png">
-
-
-
-
-
 #### Joystick
 
 A [joystick](https://www.sparkfun.com/products/15168) can be used to sense and report the input of the stick for it pivoting angle or direction. It also comes with a button input!
@@ -177,9 +163,6 @@ Connect it to your pi with Qwiic connector and try running the example script to
 ```
 
 You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Joystick_Py) to learn more about the sensor!
-
-<img width="781" alt="a6" src="https://user-images.githubusercontent.com/40989769/137970192-91c43e25-d7fc-4d5c-aa3c-763f1adca1cf.png">
-
 
 #### (Optional) Distance Sensor
 
@@ -202,9 +185,6 @@ You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_VL53L
 #### Testing - Qwiic Multi Distance Sensor (VL53L3CX)
 
 ![Qwiic Multi Distance Sensor - VL53L3CX](https://user-images.githubusercontent.com/14202464/137830381-7eb0d7d5-8a4d-41d8-ab7c-a9310578d4df.jpg)
-
-<img width="781" alt="a7" src="https://user-images.githubusercontent.com/40989769/137970216-3b9f4166-44e0-4b50-85a7-c652926632f1.png">
-
 
 ### Part C
 
@@ -437,6 +417,14 @@ We made a the front side of the prototype using card board, we did not start to 
 
 ![732459795035551955](https://user-images.githubusercontent.com/39228801/137837813-ea976e34-389b-47c0-ac99-6a11dd197494.jpg)
 
+#### Feedback
+We asked two of our friends to look at our prototype and give us some feedback on it:
+- They liked the overall design of the *Smart Timer*, especially the Art Deco style that somewhat justifies its boxy size
+- When mocking out the interaction with the timer, we noticed that both of our friends used the button exclusively to interact with the device, and did not attempt to use the distance sensing feature
+  - In part two, we will make this feature more prominent and use it to “wake up" the timer to encourage useres to interact with it
+- One of them said they wish the screen display was bigger
+  - This is a valid criticism, and we think it would also be great if we could make it bigger, perhaps by using a physical LED array and light-up indicators, but we chose to not pursue this route because we were not sure everything would fit into the box.
+
 
 LAB PART 2
 
@@ -480,22 +468,59 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Looks like": shows how the device should look, feel, sit, weigh, etc.
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
-
 <br>
-Link to the demo video: https://www.youtube.com/watch?v=Q8wy3w8GtRc <br>
-This is the look of our smart timer:<br>
 
-![837406413927457101](https://user-images.githubusercontent.com/39228801/138542858-ff3e2a91-2462-40a7-914f-68e2e387e163.jpg)
+### Smart Timer - Looks Like - Refining Design from Part 1
+From the design process in Part 1 and the feedback that we received, we decided to refine the design:
+- We made the distance sensor more prominent on hte box
+- We made the distance sensor control the *Smart Timer* wake up action
+- We added a "Waiting" and "Time Up" screen to the display to better communicate the device's states to the user
 
-![27599063804055796](https://user-images.githubusercontent.com/39228801/138542837-bea313ca-516c-405f-8ad0-71feeb768a66.jpg)
+#### Sensor Wiring
 
-This is the interior struction of the prototype:<br>
-![703329045259335972](https://user-images.githubusercontent.com/39228801/138542852-841f69bc-2073-45f5-bea0-195815678fbd.jpg)
+**Sensor Wiring (Diargram)**
 
+![sensor_diagram](https://user-images.githubusercontent.com/14202464/138803566-8d3ed4ba-a669-4f90-9646-abe03c46903f.png)
 
-The main senor we applied is the encoder. We use it as the knob for the smart timer. Then we used the 4 pin cable to connected some other senors for other fancy features.<br>
-We use the Capacitive Sensing for the start and pause button.<br>
-We use the Distance Sensor for detecting the waving hand gesture.<br>
-We use the speaker for reminding the state of the timer.<br>
-Below is the picture of how we connect all the senors in a flat view.<br>
-![420787005824392073](https://user-images.githubusercontent.com/39228801/138542940-905361e4-7149-432d-add4-1373066560f7.jpg)
+**Sensor Wiring (Flat)**
+
+![labeled_sensors](https://user-images.githubusercontent.com/14202464/138799600-5dc31306-25f9-40ea-a87e-00317d2bb96d.png)
+
+#### Final Prototype
+The main senor we applied is the rotary encoder. We use it as the knob for the smart timer. Then we used the 4 pin cable to connected some other senors for other fancy features.
+
+- We use the Capacitive Sensing for the start and pause button.
+- We use the Distance Sensor for detecting the waving hand gesture.
+- We use the speaker for reminding the state of the timer.
+
+Below is the final prototype where we connect everything together
+
+| **Sensor Wiring (Inside Paper Prototype)** | **Prototype View** |
+| --- | --- |
+| ![703329045259335972](https://user-images.githubusercontent.com/39228801/138542852-841f69bc-2073-45f5-bea0-195815678fbd.jpg) | ![27599063804055796](https://user-images.githubusercontent.com/39228801/138542837-bea313ca-516c-405f-8ad0-71feeb768a66.jpg) |
+
+### Smart Timer - Works Like - Usage and Video
+This is our usage video
+
+[![Watch the video](https://user-images.githubusercontent.com/14202464/138804059-6be8a329-a974-42f3-9eb9-4b305d49185e.PNG)](https://www.youtube.com/watch?v=Q8wy3w8GtRc)
+
+### Smart Timer - Acts Like - User Testing
+We performed a few user tests on our paper prototype
+- We asked people to pick up the device, and put it onto a table
+- We asked them to wake up the device, and set a timer, then pause the timer in the middle of the countdown and restart it again.
+- Finally we asked them how they liked their experience and what suggestions they have for improving the device
+
+**Feedback**
+- All test users really liked the "wave to start" feature and found it really cool
+- Some would like the "wave" feature to also be applied to "Starting" and "Pausing" the clock
+  - This could be achieved by using some sort of camera pose detection, but we don't think implementing this will be possible given the device size
+- Some would like the distance detection to work further away from the close range we have set
+  - We agree with this, we think we could easily modify this to have a longer detection distance by switching to using the optional distance sensor which offers a wider range of distance detection. Adding this feature will allow the user to interact with the device from further away, which could be useful for their convenience
+- Test users wished the button touch area were bigger than right now (a conductive strip)
+  - We could achieve this through using larger bands of conductive taping for our buttons, adding this feature will improve the user experience by making the button pressing action easier
+- One person think adding a feature to use voice to set timer would be really cool
+  - This is really useful feedback, as we could add this feature easily through more scripting. We think adding this feature will improve the user experience by making controlling the device even easier
+
+| **User Testing Pic (1)** | **User Testing Pic (2)** |
+| --- | --- |
+| ![IMG_20211025_214807](https://user-images.githubusercontent.com/14202464/138804379-bf5f56cf-dc99-4a5d-bfd1-bd8e24d59967.jpg) |![IMG_20211025_214819](https://user-images.githubusercontent.com/14202464/138804394-70481368-ec1f-4ad3-91fb-466f6f099600.jpg) |
