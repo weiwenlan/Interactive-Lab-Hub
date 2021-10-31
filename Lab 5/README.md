@@ -224,6 +224,9 @@ This might take a while to get fully installed. After installation, connect your
 | ![image](https://user-images.githubusercontent.com/40989769/139597495-f3ddc51e-df6e-4be0-a93a-9aec18a598df.png) | ![image](https://user-images.githubusercontent.com/40989769/139597533-21e5b66b-a974-4fe4-a6fd-020bbb48531a.png) |
 
 
+### DEPLOY THE MODEL
+
+<img width="1316" alt="iShot2021-10-31 17 19 27" src="https://user-images.githubusercontent.com/40989769/139601652-f3f19dd7-fb35-41be-80ce-ef78d72eb832.png">
 
 
 
