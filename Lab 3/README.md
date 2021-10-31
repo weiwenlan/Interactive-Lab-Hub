@@ -168,6 +168,11 @@ Pi: Have a nice day, I believe you can do it.
 
 ![](image/storyboard2.png)
 
+### Design UML
+
+![idd_lab3](https://user-images.githubusercontent.com/14202464/135925959-578631ed-d183-445a-8916-0c389c449256.png)
+
+
 ## Prototype your system
 
 The system should:
