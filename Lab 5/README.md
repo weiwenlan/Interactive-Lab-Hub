@@ -98,7 +98,31 @@ pi@ixe00:~$ cd ~/openCV-examples/object-detection
 pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 ```
 
-**\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
+**\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.<br>
+**Contours Detection**<br>
+potential design example: Object classifing system.<br>
+We can use the fact that different object has different contours to classify what type of object is showed in the camera by applying this algorithm.<br>
+![1635535976(1)](https://user-images.githubusercontent.com/39228801/139492152-4d5278de-926d-409c-acd2-1822b039cc04.png)
+<br>
+**Face Detection** <br>
+potential design example: Automatic Check-In system.<br>
+We can use the face detection algorithm to create a check-in system. Where the camera would automaticly check the student in if it sees the student. <br>
+![1635536393(1)](https://user-images.githubusercontent.com/39228801/139492746-6dd93420-310f-400f-b274-87df81d79947.png)
+<br>
+**Flow detection**<br>
+potential design example: Pet motion tracker. <br>
+We can use this to find out what our pet is doing when we are not home by monitoring the moving path of the pets.<br>
+![1635536589](https://user-images.githubusercontent.com/39228801/139493082-192d1222-2fff-4144-b56b-3755a042b15d.png)
+<br>
+**Object Detection**<br>
+potential design example: unattended object detection. <br>
+We can applying this algorithm to surveillance camera, when there are extraneous object showed in the room for a long time. It means we identified an unattended object.<br>
+![1635536715(1)](https://user-images.githubusercontent.com/39228801/139493312-c7a11d7c-ec0c-4ce2-85f1-4dae1754c17c.png)
+
+<br>
+
+
+\*\*\***
 
 #### MediaPipe
 
@@ -134,10 +158,37 @@ Each of the installs will take a while, please be patient. After successfully in
 
 Try the two main features of this script: 1) pinching for percentage control, and 2) "[Quiet Coyote](https://www.youtube.com/watch?v=qsKlNVpY7zg)" for instant percentage setting. Notice how this example uses hardcoded positions and relates those positions with a desired set of events, in `hand_pose.py` lines 48-53. 
 
+#### Hand Pose Detection
+We tried the hand pose detection model and noted the pinch percentage feature.
+
+| **Hand open** | **Hand close** |
+| --- | --- |
+| ![hand_pose_4](https://user-images.githubusercontent.com/14202464/139499719-64ccf4f4-867c-4281-b7c5-b2b87aaa6f23.PNG) |![hand_pose_1](https://user-images.githubusercontent.com/14202464/139499728-090150f1-ef68-44d5-9cb7-22511d442316.PNG) |
+
+We also noticed how the system would not be able to detect hand pose if some part of the hand is blocked by an object, for example when I'm hodling up a piece of cardboard
+
+| **Hand pose detected** | **Hand pose not detected** |
+| --- | --- |
+| ![hand_pose_2](https://user-images.githubusercontent.com/14202464/139499894-b0fc161e-bb93-4842-b8bd-0672035290a4.PNG) | ![hand_pose_3](https://user-images.githubusercontent.com/14202464/139499906-e8b1e3ff-d145-42b8-afb8-aebaebd722c7.PNG) |
+
+
 **\*\*\*Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.\*\*\***
 
 (You might also consider how this notion of percentage control with hand tracking might be used in some of the physical UI you may have experimented with in the last lab, for instance in controlling a servo or rotary encoder.)
 
+Using the hand pose pinching percentage, I can think of applying it to Human Computer Interactions, like using hand pinching to zoom in and out of an image, or using hand pinching to toggle volume up and down. 
+
+More interesting is how we could use a similar tracking for face or body pose tracking. We brainstormed some application for them:
+
+**Face Tracking**
+- Detect mood of a person based on facial features
+- Detect distracted or fatigued driving behaviour in long-haul trucking
+- Detect eye movement in polic interogation scenario
+
+**Body Pose Tracking**
+- Detect limb position in rehabilitation exercises (for patients recovering from injuries)
+- Detect limb position for bodybuilders looking to perfect their forms
+- Detect body movement for child or elder care, and alert caregivers when movmement is not detected
 
 
 #### Teachable Machines
