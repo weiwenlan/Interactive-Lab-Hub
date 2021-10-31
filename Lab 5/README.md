@@ -218,7 +218,13 @@ This might take a while to get fully installed. After installation, connect your
 (tmachine) pi@ixe00:~ Interactive-Lab-Hub/Lab 5 $ python tm_ppe_detection.py
 ```
 
-![image](https://user-images.githubusercontent.com/40989769/139597495-f3ddc51e-df6e-4be0-a93a-9aec18a598df.png)
+
+| **Tester 1 detected** | **Tester 2 detected** |
+| --- | --- |
+| ![image](https://user-images.githubusercontent.com/40989769/139597495-f3ddc51e-df6e-4be0-a93a-9aec18a598df.png) | ![image](https://user-images.githubusercontent.com/40989769/139597533-21e5b66b-a974-4fe4-a6fd-020bbb48531a.png) |
+
+
+
 
 
 
