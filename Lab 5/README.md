@@ -6,12 +6,15 @@ Your **observant device** could, for example, count items, find objects, recogni
 
 This lab will help you think through the design of observant systems, particularly corner cases that the algorithms needs to be aware of.
 
+---
+`Lab Content Below`
 ## Lab Partners
 For this Lab, we are a team of 3 people.
 
 - Xingyu Tao (xt75)
 - Wenlan Wei (ww367)
 - Jiacheng Peng (jp948)
+---
 
 ## Prep
 
@@ -105,31 +108,40 @@ pi@ixe00:~$ cd ~/openCV-examples/object-detection
 pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 ```
 
-**\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.<br>
-**Contours Detection**<br>
-potential design example: Object classifing system.<br>
-We can use the fact that different object has different contours to classify what type of object is showed in the camera by applying this algorithm.<br>
-![1635535976(1)](https://user-images.githubusercontent.com/39228801/139492152-4d5278de-926d-409c-acd2-1822b039cc04.png)
-<br>
-**Face Detection** <br>
-potential design example: Automatic Check-In system.<br>
-We can use the face detection algorithm to create a check-in system. Where the camera would automaticly check the student in if it sees the student. <br>
-![1635536393(1)](https://user-images.githubusercontent.com/39228801/139492746-6dd93420-310f-400f-b274-87df81d79947.png)
-<br>
-**Flow detection**<br>
-potential design example: Pet motion tracker. <br>
-We can use this to find out what our pet is doing when we are not home by monitoring the moving path of the pets.<br>
-![1635536589](https://user-images.githubusercontent.com/39228801/139493082-192d1222-2fff-4144-b56b-3755a042b15d.png)
-<br>
-**Object Detection**<br>
-potential design example: unattended object detection. <br>
-We can applying this algorithm to surveillance camera, when there are extraneous object showed in the room for a long time. It means we identified an unattended object.<br>
-![1635536715(1)](https://user-images.githubusercontent.com/39228801/139493312-c7a11d7c-ec0c-4ce2-85f1-4dae1754c17c.png)
+**\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.
 
-<br>
+---
+`Lab Content Below`
 
+**Contours Detection**
 
-\*\*\***
+<img src="https://user-images.githubusercontent.com/39228801/139492152-4d5278de-926d-409c-acd2-1822b039cc04.png" width="300">
+
+- potential design example: Object classifing system.
+    - We can use the fact that different object has different contours to classify what type of object is showed in the camera by applying this algorithm.<br>
+
+**Face Detection**
+
+<img src="https://user-images.githubusercontent.com/39228801/139492746-6dd93420-310f-400f-b274-87df81d79947.png" width="300">
+
+- potential design example: Automatic Check-In system.<br>
+    - We can use the face detection algorithm to create a check-in system. Where the camera would automaticly check the student in if it sees the student. <br>
+
+**Flow detection**
+
+<img src="https://user-images.githubusercontent.com/39228801/139493082-192d1222-2fff-4144-b56b-3755a042b15d.png" width="300">
+
+- potential design example: Pet motion tracker. <br>
+    - We can use this to find out what our pet is doing when we are not home by monitoring the moving path of the pets.<br>
+
+**Object Detection**
+
+<img src="https://user-images.githubusercontent.com/39228801/139493312-c7a11d7c-ec0c-4ce2-85f1-4dae1754c17c.png" width="300">
+
+- potential design example: unattended object detection. <br>
+    - We can applying this algorithm to surveillance camera, when there are extraneous object showed in the room for a long time. It means we identified an unattended object.<br>
+
+---
 
 #### MediaPipe
 
@@ -165,6 +177,9 @@ Each of the installs will take a while, please be patient. After successfully in
 
 Try the two main features of this script: 1) pinching for percentage control, and 2) "[Quiet Coyote](https://www.youtube.com/watch?v=qsKlNVpY7zg)" for instant percentage setting. Notice how this example uses hardcoded positions and relates those positions with a desired set of events, in `hand_pose.py` lines 48-53. 
 
+---
+`Lab Content Below`
+
 #### Hand Pose Detection
 We tried the hand pose detection model and noted the pinch percentage feature.
 
@@ -178,10 +193,11 @@ We also noticed how the system would not be able to detect hand pose if some par
 | --- | --- |
 | ![hand_pose_2](https://user-images.githubusercontent.com/14202464/139499894-b0fc161e-bb93-4842-b8bd-0672035290a4.PNG) | ![hand_pose_3](https://user-images.githubusercontent.com/14202464/139499906-e8b1e3ff-d145-42b8-afb8-aebaebd722c7.PNG) |
 
-
 **\*\*\*Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.\*\*\***
 
 (You might also consider how this notion of percentage control with hand tracking might be used in some of the physical UI you may have experimented with in the last lab, for instance in controlling a servo or rotary encoder.)
+
+### Interaction using hand pose and body/face pose tracking
 
 Using the hand pose pinching percentage, I can think of applying it to Human Computer Interactions, like using hand pinching to zoom in and out of an image, or using hand pinching to toggle volume up and down. 
 
@@ -197,6 +213,7 @@ More interesting is how we could use a similar tracking for face or body pose tr
 - Detect limb position for bodybuilders looking to perfect their forms
 - Detect body movement for child or elder care, and alert caregivers when movmement is not detected
 
+---
 
 #### Teachable Machines
 Google's [TeachableMachines](https://teachablemachine.withgoogle.com/train) might look very simple. However, its simplicity is very useful for experimenting with the capabilities of this technology.
@@ -229,6 +246,9 @@ This might take a while to get fully installed. After installation, connect your
 
 **\*\*\*Whether you make your own model or not, include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.\*\*\***
 
+---
+`Lab Content Below`
+
 | **Tester 1 detected** | **Tester 2 detected** |
 | --- | --- |
 | ![image](https://user-images.githubusercontent.com/40989769/139597495-f3ddc51e-df6e-4be0-a93a-9aec18a598df.png) | ![image](https://user-images.githubusercontent.com/40989769/139597533-21e5b66b-a974-4fe4-a6fd-020bbb48531a.png) |
@@ -245,6 +265,7 @@ We decided to train a model that can detect cooking ingredients for our **Recipe
 
 *Don't forget to run ```deactivate``` to end the Teachable Machines demo, and to reactivate with ```source tmachine/bin/activate``` when you want to use it again.*
 
+---
 
 #### Filtering, FFTs, and Time Series data. (optional)
 Additional filtering and analysis can be done on the sensors that were provided in the kit. For example, running a Fast Fourier Transform over the IMU data stream could create a simple activity classifier between walking, running, and standing.
@@ -267,6 +288,9 @@ Pick one of the models you have tried, pick a class of objects, and experiment w
 This can be as simple as the boat detector earlier.
 Try out different interaction outputs and inputs.
 
+---
+`Lab Content Below`
+
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***\\
 
 One of the interesting class of objects we played around with is hand gesture detection using Hand Pose and object detection using Teaching Machine. We brainstormed an idea to build a **Cooking Instructor** using object detection and hand gesture detection. This system would be hooked up to a screen that can take you step by step through assembling a recipe and making a meal.
@@ -275,39 +299,65 @@ One of the interesting class of objects we played around with is hand gesture de
 2. **Preparing the Ingredients**: Once the user has gathered all the ingredients, they can proceed to the next step. The **cooking instructor** will walk the user through the steps of preparing the ingredients, by detecting the ingredients present on the cutting board and instructing the user to proceed to cut them into pieces. The device will detect what ingredients are on the board, and if the ingredient processing is done and proceed to the next step.
 3. **Cooking**: For the cooking portion, the **cooking instructor** will provide automatic timers for the user to use. They can also flip through the recipe steps using hand gestures to review or preview steps.
 
-
+### Recipe Helper 
 ![idd5](https://user-images.githubusercontent.com/14202464/139872477-d62fbbe0-42f1-48c4-ae5d-f61da37f598c.jpg)
+
+---
 
 ### Part C
 ### Test the interaction prototype
 
 Now flight test your interactive prototype and **note down your observations**:
-For example:
-1. When does it what it is supposed to do?<br>
 
-- When you are cooking. It is hard to use your phone to looking at the recepie with your wet hands. This system would use camera to detect the food indegredient on the table, determine what step you are in the recipe and display it on the monitor. You can also change the step you are in by using the hand gestures. (Moving forward or backword for the recepie displayed on the monitor)<br>
+--- 
+`Lab content below`
+
+### Flight Test
+
+1. When does it what it is supposed to do?
+
+    - When the user is preparing ingredients to cook, tt is hard to use a phone to lookat the recipe without diretying the phone with wet hands. This **Recipe Helper** would use an overhead camera to detect the food indegredient on the table and determine what step the user is in the recipe and display it on a monitor. The user can also change the step they are in by using hand gestures (moving forward or backward in the recepie displayed on the monitor).
+
 2. When does it fail?<br>
 
-- The object on the table might not be correct detected. And that leads to a fail of moving forward in the recepie.<br>
+    - The object on the table might not be correctly detected. And that leads to a failure of moving forward in the recepie.
+
 3. When it fails, why does it fail?<br>
 
-- The food indegredient might be cutted in different shapes. And that leads to a confusion of determine what kind of indregident it is.<br>
+    - The food indegredient might be cutted in different shapes. And that leads to a confusion of determine what kind of indregident it is.
+    - During Teachable Machines testing, we noticed that if we swtiched the background, for instance put ingredients on a plate, the classification confidence percentage drops drastically, from `>90%` to `<70%`. This is because the classification algorithm hasn't seen different types of background in its training phase.
+
 4. Based on the behavior you have seen, what other scenarios could cause problems?<br>
 
-- The system may not detect the hand gesture correctly. <br>
+    - The system may not detect the hand gesture correctly, if someone has nail polish, or different hand size.
+
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
-1. Are they aware of the uncertainties in the system?<br>
 
-- It is not intuitive that control the height by using hand gesture. <br>
-3. How bad would they be impacted by a miss classification?<br>
+### Wizard of Oz Testing with 2 Test Users
 
-- It will not be really bad. If the system do not work properly, the user would jsut dry their hands and check the recepie manually.<br>
+We asked 2 of our friends to try out the **Recipe Helper** using a *Wizard of Oz* setup. We first gave them instructions on how to control the recipe book using hand gestures, and aksed them to try to follow the recipe book instructions on the iPad (which one of us wizarded). We let them actually prepare the ingredients (up until the cooking step anyways), and then observed their interactions and noted primary behavioral data down.
+
+1. Are they aware of the uncertainties in the system?
+
+    - We did not tell the users about what height they had to hold their hand to trigger the gesture recognition. Both users had to adjust their hand height a bit to learn how to control the forward/backward gestures, but they learned this quickly (within 2 minutes).
+    - The users were both aware of the uncertainties in image recognition, since they had previous experience using similar systems. They intuitively removed their hands from the camera frame after putting ingredients onto the cutting board. This might not be the case for people who have no previous expeirence using image recognition systems.
+
+3. How bad would they be impacted by a miss classification?
+
+    - It will not be really bad. If the system do not detect ingredients properly due to background misclassification, the user could flip through the recipe using hand gestures, **or** dry their hands and flip through the recepie manually.
+    - One user actually asked us this question, and we reminded them that they could use hand gestures to flip through the recipe. Apparently this was not obvious through our introduction, as the user thought they could not go backward thourgh the recipe. We can fix this by adding clear control instructions on the screen.
+
 4. How could change your interactive system to address this?<br>
 
-- We could display a user guid in the monitor when a user approaches.<br>
+    - We could display a user guide in the monitor when a user approaches, and on each screen indicate that they can move forward/backward using hand gestures.
+
 5. Are there optimizations you can try to do on your sense-making algorithm.<br>
 
-- We could take more pictures of hand gestures, and catetorized them into a single category. That would increase the rate for detecting the gesture if the gesture is not perfect. <br>
+    - We could take more pictures of hand gestures, and catetorize them into a single category. That would increase the rate for detecting the gesture if the gesture is not perfect.
+    - However this requires a lot more training ideally using thousands of images of different ingredients and background, to make the system smarter and more accurate.
+
+--- 
+
 ### Part D
 ### Characterize your own Observant system
 
@@ -323,11 +373,16 @@ During the lecture, we mentioned questions to help characterize a material:
 
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
 
+--- 
+`Lab content below`
+
 ### Recipe Helper - Wizarding Video
 
 This video shows how the **Recipe Helper** should work in a real life environment to help an user cook a recipe following its steps and promtps and using hand gestures to control it.
 
 [![Watch the video](https://user-images.githubusercontent.com/14202464/140663890-72e5f95c-7a10-4307-abdb-7a3f6e57569f.PNG)](https://www.youtube.com/watch?v=2Ej6uM9cauU)
+
+---
 
 ### Part 2.
 
