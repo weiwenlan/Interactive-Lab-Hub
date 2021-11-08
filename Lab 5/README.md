@@ -6,6 +6,13 @@ Your **observant device** could, for example, count items, find objects, recogni
 
 This lab will help you think through the design of observant systems, particularly corner cases that the algorithms needs to be aware of.
 
+## Lab Partners
+For this Lab, we are a team of 3 people.
+
+- Xingyu Tao (xt75)
+- Wenlan Wei (ww367)
+- Jiacheng Peng (jp948)
+
 ## Prep
 
 1.  Pull the new Github Repo.
@@ -218,25 +225,23 @@ This might take a while to get fully installed. After installation, connect your
 (tmachine) pi@ixe00:~ Interactive-Lab-Hub/Lab 5 $ python tm_ppe_detection.py
 ```
 
+(**Optionally**: You can train your own model, too. First, visit [TeachableMachines](https://teachablemachine.withgoogle.com/train), select Image Project and Standard model. Second, use the webcam on your computer to train a model. For each class try to have over 50 samples, and consider adding a background class where you have nothing in view so the model is trained to know that this is the background. Then create classes based on what you want the model to classify. Lastly, preview and iterate, or export your model as a 'Tensorflow' model, and select 'Keras'. You will find an '.h5' file and a 'labels.txt' file. These are included in this labs 'teachable_machines' folder, to make the PPE model you used earlier. You can make your own folder or replace these to make your own classifier.)
+
+**\*\*\*Whether you make your own model or not, include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.\*\*\***
 
 | **Tester 1 detected** | **Tester 2 detected** |
 | --- | --- |
 | ![image](https://user-images.githubusercontent.com/40989769/139597495-f3ddc51e-df6e-4be0-a93a-9aec18a598df.png) | ![image](https://user-images.githubusercontent.com/40989769/139597533-21e5b66b-a974-4fe4-a6fd-020bbb48531a.png) |
 
-
 ### DEPLOY THE MODEL
 
 <img width="1316" alt="iShot2021-10-31 17 19 27" src="https://user-images.githubusercontent.com/40989769/139601652-f3f19dd7-fb35-41be-80ce-ef78d72eb832.png">
 
+### Training a Model that detects cooking ingredients - Video
 
+We decided to train a model that can detect cooking ingredients for our **Recipe Helpter** project. Here is a short video showing how it detects different food ingredients.
 
-
-
-
-(**Optionally**: You can train your own model, too. First, visit [TeachableMachines](https://teachablemachine.withgoogle.com/train), select Image Project and Standard model. Second, use the webcam on your computer to train a model. For each class try to have over 50 samples, and consider adding a background class where you have nothing in view so the model is trained to know that this is the background. Then create classes based on what you want the model to classify. Lastly, preview and iterate, or export your model as a 'Tensorflow' model, and select 'Keras'. You will find an '.h5' file and a 'labels.txt' file. These are included in this labs 'teachable_machines' folder, to make the PPE model you used earlier. You can make your own folder or replace these to make your own classifier.)
-
-**\*\*\*Whether you make your own model or not, include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.\*\*\***
-
+[![Watch the video](https://user-images.githubusercontent.com/14202464/140663816-c544b608-4f1a-4342-975b-a56fcd5d4cb4.PNG)](https://www.youtube.com/watch?v=ve8fQvc3Npo)
 
 *Don't forget to run ```deactivate``` to end the Teachable Machines demo, and to reactivate with ```source tmachine/bin/activate``` when you want to use it again.*
 
@@ -270,29 +275,39 @@ One of the interesting class of objects we played around with is hand gesture de
 2. **Preparing the Ingredients**: Once the user has gathered all the ingredients, they can proceed to the next step. The **cooking instructor** will walk the user through the steps of preparing the ingredients, by detecting the ingredients present on the cutting board and instructing the user to proceed to cut them into pieces. The device will detect what ingredients are on the board, and if the ingredient processing is done and proceed to the next step.
 3. **Cooking**: For the cooking portion, the **cooking instructor** will provide automatic timers for the user to use. They can also flip through the recipe steps using hand gestures to review or preview steps.
 
-**[insert story board]**
+
+![idd5](https://user-images.githubusercontent.com/14202464/139872477-d62fbbe0-42f1-48c4-ae5d-f61da37f598c.jpg)
+
 ### Part C
 ### Test the interaction prototype
 
 Now flight test your interactive prototype and **note down your observations**:
 For example:
 1. When does it what it is supposed to do?<br>
-    When you are cooking. It is hard to use your phone to looking at the recepie with your wet hands. This system would use camera to detect the food indegredient on the table, determine what step you are in the recipe and display it on the monitor. You can also change the step you are in by using the hand gestures. (Moving forward or backword for the recepie displayed on the monitor)<br>
+
+- When you are cooking. It is hard to use your phone to looking at the recepie with your wet hands. This system would use camera to detect the food indegredient on the table, determine what step you are in the recipe and display it on the monitor. You can also change the step you are in by using the hand gestures. (Moving forward or backword for the recepie displayed on the monitor)<br>
 2. When does it fail?<br>
-    The object on the table might not be correct detected. And that leads to a fail of moving forward in the recepie.<br>
+
+- The object on the table might not be correct detected. And that leads to a fail of moving forward in the recepie.<br>
 3. When it fails, why does it fail?<br>
-    The food indegredient might be cutted in different shapes. And that leads to a confusion of determine what kind of indregident it is.<br>
+
+- The food indegredient might be cutted in different shapes. And that leads to a confusion of determine what kind of indregident it is.<br>
 4. Based on the behavior you have seen, what other scenarios could cause problems?<br>
-    The system may not detect the hand gesture correctly. <br>
+
+- The system may not detect the hand gesture correctly. <br>
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
 1. Are they aware of the uncertainties in the system?<br>
-    It is not intuitive that control the height by using hand gesture. <br>
+
+- It is not intuitive that control the height by using hand gesture. <br>
 3. How bad would they be impacted by a miss classification?<br>
-    It will not be really bad. If the system do not work properly, the user would jsut dry their hands and check the recepie manually.<br>
+
+- It will not be really bad. If the system do not work properly, the user would jsut dry their hands and check the recepie manually.<br>
 4. How could change your interactive system to address this?<br>
-    We could display a user guid in the monitor when a user approaches.<br>
+
+- We could display a user guid in the monitor when a user approaches.<br>
 5. Are there optimizations you can try to do on your sense-making algorithm.<br>
-    We could take more pictures of hand gestures, and catetorized them into a single category. That would increase the rate for detecting the gesture if the gesture is not perfect. <br>
+
+- We could take more pictures of hand gestures, and catetorized them into a single category. That would increase the rate for detecting the gesture if the gesture is not perfect. <br>
 ### Part D
 ### Characterize your own Observant system
 
@@ -307,6 +322,12 @@ During the lecture, we mentioned questions to help characterize a material:
 * How does X feel?
 
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
+
+### Recipe Helper - Wizarding Video
+
+This video shows how the **Recipe Helper** should work in a real life environment to help an user cook a recipe following its steps and promtps and using hand gestures to control it.
+
+[![Watch the video](https://user-images.githubusercontent.com/14202464/140663890-72e5f95c-7a10-4307-abdb-7a3f6e57569f.PNG)](https://www.youtube.com/watch?v=2Ej6uM9cauU)
 
 ### Part 2.
 
