@@ -1,0 +1,7 @@
+0 one_tosxc mato
+1 two_tomatos
+2 EGG
+3 EGGS
+4 BACKGROUND
+5 SLICED_TOMATOS
+6 MIXED_EGGS

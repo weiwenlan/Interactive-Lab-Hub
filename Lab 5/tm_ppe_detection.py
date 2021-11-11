@@ -3,9 +3,11 @@
 
 import tensorflow.keras
 from PIL import Image, ImageOps
+
 import numpy as np
 import cv2
 import sys
+
 
 
 # Disable scientific notation for clarity
@@ -33,10 +35,10 @@ else:
 
 
 # Load the model
-model = tensorflow.keras.models.load_model('keras_model.h5')
+model = tensorflow.keras.models.load_model('face_test/keras_model.h5')
 # Load Labels:
 labels=[]
-f = open("labels.txt", "r")
+f = open("face_test/labels.txt", "r")
 for line in f.readlines():
     if(len(line)<1):
         continue
