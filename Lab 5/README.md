@@ -388,4 +388,13 @@ This video shows how the **Recipe Helper** should work in a real life environmen
 
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
 
-**\*\*\*Include a short video demonstrating the finished result.\*\*\***
+### The Final Video
+[![1636497607(1)](https://user-images.githubusercontent.com/39228801/141016942-eeedc3c3-299f-4042-9130-e232a76c5083.png)](https://youtu.be/wX-EdGsX8nM)
+
+## User Testing
+We have ask 3 people to test our product, here is the feedbacks:<br>
+1. If there is a more user-friendly interface, it would be really great. <br>
+2. It will be really fun to let the user customize their own recepie. <br>
+3. Could add some physial user interface in case the visual detection not working. <br>
+4. Could add a voice helper.<br>
+5. Sometimes the camera's cable is annoying, could use a wireless camera.<br>
