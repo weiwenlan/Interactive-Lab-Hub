@@ -187,6 +187,7 @@ Our design is called the “Omnipresent Doorbell”. The basic idea is that when
 Input: When the doorbell is being hit, it will get the input from the button that being hit. <br>
 Output: The out put will be the sound generated from the speaker at the bathroom, and the flashing light being generated at the study room. <br>
 Computation: The pi connect to the doorbell is the sender. When it the doorbell being hit, it will send a message in the channel to all the receivers. The pi at the bathroom and the study room are the receivers. They will play sound/ flash lights when they receive the message from the doorbell. The receivers also have a button. The people in the room could hit the button, and the receivers will send a message to the doorbell, the doorbell would generate a voice to indicate the guest that the host has being notified. <br>
+![806346247209795563](https://user-images.githubusercontent.com/39228801/141711221-4af236ff-d09e-4356-97c4-3208e7bb26e2.jpg)
 
 **\*\*\*3. Build a working prototype of the system.\*\*\*** <br>
 The user interface and user interaction is intuitive and straight forward. All the interaction are based on a very common interaction ---- hit the doorbell. The guest are just doing what they normally do. And when the host confirmed their presence, the doorbell will play a voice notify the guest. Since the voice is a speech, there will no obstacles for the guest to understand at all. For the host side, since he/she is the one who uses the system, they are expected to understand the whole system. <br>
