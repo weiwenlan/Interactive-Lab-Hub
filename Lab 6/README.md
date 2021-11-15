@@ -1,6 +1,14 @@
 # Little Interactions Everywhere
 
-## Prep
+## Lab Partners
+For this Lab, we are a team of 3 people.
+
+```
+- Xingyu Tao (xt75)
+- Wenlan Wei (ww367)
+- Jiacheng Peng (jp948)
+```
+
 
 1. Pull the new changes from the class interactive-lab-hub. (You should be familiar with this already!)
 2. Install [MQTT Explorer](http://mqtt-explorer.com/) on your laptop.
@@ -54,6 +62,9 @@ Once connected, you should be able to see all the messages under the IDD topic. 
 
 ![publish settings](imgs/mqtt_explorer_2.png?raw=true)
 
+### Testing MQTT Publishing
+<img src="https://user-images.githubusercontent.com/14202464/141701278-d24d42ee-9bcd-4277-a36c-67cf81b80708.PNG" width="600">
+
 
 ### Part B
 ### Send and Receive on your Pi
@@ -86,6 +97,12 @@ Once connected, you should be able to see all the messages under the IDD topic. 
 
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
 
+1. We can use it to send the moisture level information for monitoring differernt plants, and use it to create a smart plant watering system. They key function is that when the moisture level of all the plants are below certain level, the system initiates and starts watering all the plants.
+2. We can use it for smart furniture. You can turn the bathroom's light on and off when you are in the bedroom.
+3. We can use it on the door bell. When the door bell rings, the messges could be sent to other device in the home, for example the TV, the lights.
+4. We can use the speech to text algorithm along with the message function to create a voice controlling system to control electronics like lights.
+5. We can use the text to speech algorithm along with the message funciton to read emails for you.
+
 ### Part C
 ### Streaming a Sensor
 
@@ -107,8 +124,19 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
 
 **\*\*\*Include a picture of your setup here: what did you see on MQTT Explorer?\*\*\***
 
+#### Capacitive Sensor Setup
+<img src="https://user-images.githubusercontent.com/14202464/141701372-004122a3-bebe-49a8-8194-657d1a20ed73.jpg" width="600">
+
+#### MQTT Response
+<img width="1136" alt="twizzler_test_2" src="https://user-images.githubusercontent.com/14202464/141701414-e6165fd1-16f5-48d3-944c-022d328c4b4a.png" width="600">
+
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
 
+#### Rotatry Sensor Setup
+<img src="https://user-images.githubusercontent.com/14202464/141701540-51df236f-1444-4783-a424-0eb4650efc5c.jpg" width="600">
+
+#### MQTT Response
+<img src="https://user-images.githubusercontent.com/14202464/141701598-9e584c40-d38c-4c81-9e4f-c3ef8c459410.PNG" width="600">
 
 ### Part D
 ### The One True ColorNet
@@ -141,19 +169,36 @@ Of course not! You can go to [https://one-true-colornet.glitch.me/](https://one-
 
 **\*\*\*Can you set up the script that can read the color anyone else publish and display it on your screen?\*\*\***
 
+#### Colors Universal Receiver
+We set up a script that would receive all the colors output from different users by modifying the `reader.py` file into a version called `color_reader.py` where it would display all color values that are streamed to the channel topic `IDD/colors`. This way by running `python color_reader.py` we can read all the different color values being read in different Raspberry Pis.
+
+<img src="https://user-images.githubusercontent.com/14202464/141701687-2d7a79bd-94a8-43fa-93d8-45c07744d421.PNG" width="600">
+
 
 ### Part E
 ### Make it your own
 
 Find at least one class (more are okay) partner, and design a distributed application together based on the exercise we asked you to do in this lab.
 
-**\*\*\*1. Explain your design\*\*\*** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
+**\*\*\*1. Explain your design\*\*\*** <br>
+Our design is called the “Omnipresent Doorbell”. The basic idea is that when the door bell being hit, people in the house that is not close to the door might not hear the sound. The device in other rooms could receive the message sent by the door bell and act simultaneously. For example, when the doorbell rings, the speaker in the bathroom will generate a sound to notify the people there are someone coming. And in the study room, because people in the study room are studying or having a meeting, which they do not like to be disrupted by a sound. The light in the study would room flash as the doorbell being hit. This is a more gentle approach to notify the user that someone is coming. And the people in the house could hit a button to confirm that they accquired the fact that someone is outside. After the button being hit, the doorbell will play a voice saying that the hsot have being notified. The “Omnipresent Doorbell” will solve the problem missing the sound of doorbell and make sure you got notified when someone hit the doorbell. <br>
 
-**\*\*\*2. Diagram the architecture of the system.\*\*\*** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
+**\*\*\*2. Diagram the architecture of the system.\*\*\*** <br>
+Input: When the doorbell is being hit, it will get the input from the button that being hit. <br>
+Output: The out put will be the sound generated from the speaker at the bathroom, and the flashing light being generated at the study room. <br>
+Computation: The pi connect to the doorbell is the sender. When it the doorbell being hit, it will send a message in the channel to all the receivers. The pi at the bathroom and the study room are the receivers. They will play sound/ flash lights when they receive the message from the doorbell. The receivers also have a button. The people in the room could hit the button, and the receivers will send a message to the doorbell, the doorbell would generate a voice to indicate the guest that the host has being notified. <br>
 
-**\*\*\*3. Build a working prototype of the system.\*\*\*** Do think about the user interface: if someone encountered these bananas somewhere in the wild, would they know how to interact with them? Should they know what to expect?
+**\*\*\*3. Build a working prototype of the system.\*\*\*** <br>
+The user interface and user interaction is intuitive and straight forward. All the interaction are based on a very common interaction ---- hit the doorbell. The guest are just doing what they normally do. And when the host confirmed their presence, the doorbell will play a voice notify the guest. Since the voice is a speech, there will no obstacles for the guest to understand at all. For the host side, since he/she is the one who uses the system, they are expected to understand the whole system. <br>
 
 **\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
 
-<!--**\*\*\*5. BONUS (Wendy didn't approve this so you should probably ignore it)\*\*\*** get the whole class to run your code and make your distributed system BIGGER.-->
+[![1636935813](https://user-images.githubusercontent.com/39228801/141705107-ef2e7b49-6bd8-4541-9ec5-4102d4ca4f25.png)](https://www.youtube.com/watch?v=wy4fX0s_vVo)
 
+### User Testing <br>
+We’ve asked three people to test our product, below are the feedbacks they give us.<br>
+1.	Could build a talking channel let the guest and host talk directly through the doorbell.<br>
+2.	Let the light in the study room changed color from green to red if the guest pushed the doorbell consistently to indicate they have emergencies.<br>
+3.	Can apply the speech to text, to let the guest talk to the doorbell and convert it into message to be sent to the host.<br>
+
+<!--**\*\*\*5. BONUS (Wendy didn't approve this so you should probably ignore it)\*\*\*** get the whole class to run your code and make your distributed system BIGGER.-->
